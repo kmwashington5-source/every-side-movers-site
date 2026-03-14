@@ -3,6 +3,16 @@ export default function ContactPage() {
     <section className="section-shell">
       <h1 className="text-4xl font-bold">Contact Us</h1>
       <p className="mt-4 max-w-xl text-white/75">Tell us about your upcoming move and our team will respond with a personalized plan.</p>
+
+      <div className="mt-6 flex flex-wrap gap-3">
+        <a href="tel:3128574696" className="rounded-md bg-gold-400 px-5 py-3 font-medium text-black transition hover:bg-gold-500">
+          Call 312-857-4696
+        </a>
+        <a href="sms:3128574696" className="rounded-md border border-white/30 px-5 py-3 font-medium transition hover:border-gold-400 hover:text-gold-400">
+          Text for Quote
+        </a>
+      </div>
+
       <form className="mt-8 grid max-w-2xl gap-4 rounded-xl border border-white/10 bg-white/5 p-6">
         <input className="rounded-md border border-white/20 bg-black/50 px-4 py-3" placeholder="Full Name" />
         <input className="rounded-md border border-white/20 bg-black/50 px-4 py-3" placeholder="Email" type="email" />

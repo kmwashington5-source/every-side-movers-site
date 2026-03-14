@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import QuoteForm from './components/quote-form';
 
 const services = [
   {
@@ -61,25 +62,7 @@ export default function HomePage() {
         <div id="quote-form" className="rounded-2xl border border-gold-400/40 bg-white/5 p-6 shadow-glow scroll-mt-24">
           <h2 className="text-2xl font-semibold">Request Your Quote</h2>
           <p className="mt-2 text-sm text-white/70">Receive a custom moving estimate within one business day.</p>
-          <form
-            className="mt-6 grid gap-4"
-            action="https://formspree.io/f/your-form-id"
-            method="POST"
-          >
-            <input name="fullName" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Full Name" required />
-            <input name="phone" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Phone" type="tel" required />
-            <input name="email" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Email" type="email" required />
-            <input name="moveDate" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" type="date" aria-label="Move Date" required />
-            <input name="serviceType" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Service Type" required />
-            <input name="pickupLocation" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Pickup Location" required />
-            <input name="dropoffLocation" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Dropoff Location" required />
-            <input name="moveSize" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Move Size" required />
-            <input name="stairsElevator" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Stairs/Elevator" required />
-            <textarea name="message" className="min-h-24 rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Message" />
-            <button type="submit" className="rounded-md bg-gold-400 px-5 py-3 font-medium text-black transition hover:bg-gold-500">
-              Submit Request
-            </button>
-          </form>
+          <QuoteForm />
         </div>
       </section>
 

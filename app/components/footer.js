@@ -26,7 +26,11 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="font-medium">Contact</h4>
-          <p className="mt-2 text-sm text-white/70">(555) 123-9876</p>
+          <p className="mt-2 text-sm text-white/70">
+            <a href="tel:3128574696" className="hover:text-gold-400">
+              (312) 857-4696
+            </a>
+          </p>
           <p className="text-sm text-white/70">hello@everysidemovers.com</p>
         </div>
       </div>

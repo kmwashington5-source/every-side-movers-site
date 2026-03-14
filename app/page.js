@@ -46,23 +46,36 @@ export default function HomePage() {
             speed, and complete peace of mind.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/contact" className="rounded-md bg-gold-400 px-5 py-3 font-medium text-black transition hover:bg-gold-500">
-              Get a Free Quote
-            </Link>
-            <Link href="/services" className="rounded-md border border-white/30 px-5 py-3 font-medium transition hover:border-gold-400 hover:text-gold-400">
-              Explore Services
+            <a href="tel:3128574696" className="rounded-md bg-gold-400 px-5 py-3 font-medium text-black transition hover:bg-gold-500">
+              Call Now
+            </a>
+            <a href="sms:3128574696" className="rounded-md border border-white/30 px-5 py-3 font-medium transition hover:border-gold-400 hover:text-gold-400">
+              Text for Quote
+            </a>
+            <Link href="/#quote-form" className="rounded-md border border-gold-400/50 px-5 py-3 font-medium text-gold-400 transition hover:bg-gold-400 hover:text-black">
+              Get Quote
             </Link>
           </div>
         </div>
 
-        <div className="rounded-2xl border border-gold-400/40 bg-white/5 p-6 shadow-glow">
+        <div id="quote-form" className="rounded-2xl border border-gold-400/40 bg-white/5 p-6 shadow-glow scroll-mt-24">
           <h2 className="text-2xl font-semibold">Request Your Quote</h2>
           <p className="mt-2 text-sm text-white/70">Receive a custom moving estimate within one business day.</p>
-          <form className="mt-6 grid gap-4">
-            <input className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Full Name" />
-            <input className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Email Address" type="email" />
-            <input className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Moving Date" type="date" />
-            <textarea className="min-h-24 rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Tell us about your move" />
+          <form
+            className="mt-6 grid gap-4"
+            action="https://formspree.io/f/your-form-id"
+            method="POST"
+          >
+            <input name="fullName" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Full Name" required />
+            <input name="phone" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Phone" type="tel" required />
+            <input name="email" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Email" type="email" required />
+            <input name="moveDate" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" type="date" aria-label="Move Date" required />
+            <input name="serviceType" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Service Type" required />
+            <input name="pickupLocation" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Pickup Location" required />
+            <input name="dropoffLocation" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Dropoff Location" required />
+            <input name="moveSize" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Move Size" required />
+            <input name="stairsElevator" className="rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Stairs/Elevator" required />
+            <textarea name="message" className="min-h-24 rounded-md border border-white/20 bg-black/50 px-4 py-3 text-sm" placeholder="Message" />
             <button type="submit" className="rounded-md bg-gold-400 px-5 py-3 font-medium text-black transition hover:bg-gold-500">
               Submit Request
             </button>
@@ -83,7 +96,20 @@ export default function HomePage() {
       </section>
 
       <section className="section-shell">
-        <h2 className="text-3xl font-semibold">What Customers Say</h2>
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="text-3xl font-semibold">Customer Reviews</h2>
+            <p className="mt-2 text-white/75">Trusted by Chicago-area homeowners and businesses.</p>
+          </div>
+          <a
+            href="https://www.google.com/search?q=Every+Side+Movers+reviews"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-md border border-gold-400/50 px-5 py-3 font-medium text-gold-400 transition hover:bg-gold-400 hover:text-black"
+          >
+            See More Reviews
+          </a>
+        </div>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {reviews.map((review) => (
             <blockquote key={review.name} className="rounded-xl border border-gold-400/20 bg-black/70 p-6">

@@ -1,6 +1,7 @@
 import './globals.css';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
+import MobileCtaBar from './components/mobile-cta-bar';
 
 export const metadata = {
   title: 'Every Side Movers | Premium Moving Services',
@@ -12,8 +13,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="min-h-screen">
         <Navbar />
-        <main>{children}</main>
+        <main className="pb-20 md:pb-0">{children}</main>
         <Footer />
+        <MobileCtaBar />
       </body>
     </html>
   );

@@ -28,7 +28,7 @@ export default function Footer() {
           <h4 className="font-medium">Contact</h4>
           <p className="mt-2 text-sm text-white/70">
             <a href="tel:3128574696" className="hover:text-gold-400">
-              (312) 857-4696
+              312-857-4696
             </a>
           </p>
           <p className="text-sm text-white/70">hello@everysidemovers.com</p>
